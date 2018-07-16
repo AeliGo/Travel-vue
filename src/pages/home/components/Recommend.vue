@@ -28,7 +28,7 @@ export default {
   name: 'HomeRecommend',
   data () {
     return {
-      loadmore:false,
+      loadmore: false,
       recommendList: [{
         id: '0001',
         imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
