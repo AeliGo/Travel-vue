@@ -18,7 +18,7 @@ export default {
         pagination: '.swiper-pagination',
         loop: true,
         autoplay: 3000,
-        paginationType:"bullets"
+        paginationType: 'bullets'
       },
       swiperList: [{
         id: '0001',
@@ -40,11 +40,12 @@ export default {
 <style lang="stylus" scoped>
 .wrapper >>> .swiper-pagination-bullet-active
   background: #fff !important
+.wrapper >>> .swiper-container
+    height :0
+    overflow :hidden
+    padding-bottom :58.9%
 .wrapper
   width :100%
-  height :0
-  overflow :hidden
-  padding-bottom :58.9%
   background :#ccc
   .swiper-img
     width :100%
