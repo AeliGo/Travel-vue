@@ -93,6 +93,7 @@ export default {
   padding-bottom:50%
   overflow :hidden
 .icons
+  margin-top :.1rem
   .icon
     height :0
     position :relative
