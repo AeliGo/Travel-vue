@@ -7,7 +7,7 @@
         <input class="iconfont" type="search" :placeholder='icon' name="keywords">
       </div>
       <div class="header-right">
-        城市
+        {{city}}
         <span class="iconfont dropdown-arrow">&#xe64a;</span>
       </div>
   </div>
@@ -16,6 +16,11 @@
 <script>
 export default {
   name: 'HomeHeader',
+  props: {
+    city: {
+      type: String
+    }
+  },
   data: function () {
     return {
       icon: '\ue611 输入城市/景点/游玩主题'
