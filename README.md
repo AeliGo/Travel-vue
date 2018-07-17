@@ -2,7 +2,10 @@
 
 > ## Description: Website based on Mobile Terminal 
 > * Html/CSS/Javascript/Stylus
-> * Vue-router/Swiper/Vuex
+> * Vue-router/Axios/Vuex
+> * Better-Scroll/Swiper
+> * Mock Data
+> * Performance Optimization
 
 ## Build Setup
 
