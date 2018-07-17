@@ -6,10 +6,12 @@
       <div class="header-input">
         <input class="iconfont" type="search" :placeholder='icon' name="keywords">
       </div>
-      <div class="header-right">
+      <router-link to="/city">
+        <div class="header-right">
         {{city}}
         <span class="iconfont dropdown-arrow">&#xe64a;</span>
-      </div>
+        </div>
+      </router-link>
   </div>
 </template>
 
@@ -33,7 +35,7 @@ export default {
 @import '~styles/varibles.styl'
 .header
   display : flex
-  line-height : .86rem
+  line-height : $headerHeight
   background : $bgColor
   color :#fff
   .header-left
@@ -54,7 +56,8 @@ export default {
     width : 1.24rem
     float : right
     text-align :center
+    color :#fff
     .dropdown-arrow
-      font-size: .15rem
-      margin-left :-.04rem
+      font-size :.15rem
+      margin-left : .04rem
 </style>
