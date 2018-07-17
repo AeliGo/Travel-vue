@@ -33,6 +33,7 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
+
 .header
   display : flex
   line-height : $headerHeight
@@ -52,6 +53,7 @@ export default {
       height :.62rem
       border-radius :.1rem
       padding-left :.17rem
+      color :#666
   .header-right
     width : 1.24rem
     float : right

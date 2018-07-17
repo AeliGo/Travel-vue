@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~styles/varibles.styl';
+@import '~styles/varibles.styl'
 
 .header
   position :relative
@@ -32,5 +32,4 @@ export default {
     width :.64rem
     text-align :center
     font-size :.4rem
-    
 </style>
