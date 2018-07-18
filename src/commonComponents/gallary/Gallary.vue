@@ -1,7 +1,7 @@
 <template>
   <div class="container" @click="handleGallaryClick">
     <div class="wrapper">
-      <swiper :options="swiperOption">
+      <swiper :options="swiperOption" v-if="showSwiper">
         <swiper-slide v-for="(item,index) of imgs" :key="index">
           <img class="swiper-img" :src="item" alt="">
         </swiper-slide>
@@ -27,6 +27,11 @@ export default {
         observeParents: true, /* 用于每次dom结构变化时swiper自我刷新 */
         observer: true
       }
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.imgs.length
     }
   },
   methods: {
