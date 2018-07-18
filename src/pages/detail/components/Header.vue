@@ -24,6 +24,9 @@ export default {
   activated () {
     window.addEventListener('scroll', this.handleScroll)
   },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll) /* 视图离开时 解绑EventListener */
+  },
   methods: {
     handleScroll () {
       const top = document.documentElement.scrollTop
