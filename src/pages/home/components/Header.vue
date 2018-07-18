@@ -1,7 +1,7 @@
 <template>
   <div class="header">
       <div class="header-left">
-        <div class="iconfont backward-arrow">&#xe607;</div>
+        <span class="iconfont backward-arrow">&#xe607;</span>
       </div>
       <div class="header-input">
         <input class="iconfont" type="search" :placeholder='icon' name="keywords">

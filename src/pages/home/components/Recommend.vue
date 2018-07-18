@@ -29,7 +29,7 @@
           <button class="item-button">查看详情</button>
         </div>
       </router-link>
-      <div class="loadall" @click="showProducts">{{loadmore ? '隐藏部分产品' : '显示所有产品'}}</div>
+      <div class="loadall" v-show="list.length" @click="showProducts">{{loadmore ? '隐藏部分产品' : '显示所有产品'}}</div>
     </ul>
   </div>
 </template>
