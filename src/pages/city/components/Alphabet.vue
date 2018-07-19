@@ -1,12 +1,12 @@
 <template>
-  <ul class="list">
+  <ul class="list" ref="mylist">
     <li
     class="item"
     v-for="item of letters"
     :key="item"
     :ref="item"
     @click="handleLetterClick"
-    @touchstart="handleTouchStart"
+    @touchstart.prevent="handleTouchStart"
     @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
     >{{item}}</li>
@@ -38,7 +38,7 @@ export default {
     }
   },
   updated () {
-    this.startY = this.$refs['A'][0].offsetTop /* 获取第一个A字母距离parent box顶部的高度 */
+    this.startY = this.$refs['mylist'].offsetTop /* 获取页面顶部的高度 */
   },
   methods: {
     handleLetterClick (e) {
@@ -54,7 +54,7 @@ export default {
           clearTimeout(this.timer)
         }
         this.timer = setTimeout(() => {
-          const touchY = e.touches[0].clientY - 79 /* 获取touch 字母距离parent box顶部的高度 */
+          const touchY = e.touches[0].clientY /* 获取touch 字母距离parent box顶部的高度 */
           const dis = touchY - this.startY
           const index = Math.floor(dis / 19)
           if (index >= 0 && index < this.letters.length) {
@@ -77,10 +77,9 @@ export default {
   display :flex
   flex-direction :column
   justify-content : center
-  position : absolute
-  top : 1.58rem
+  position : fixed
+  top : 2.5rem
   right :0
-  bottom :0
   width : .4rem
   .item
     text-align :center

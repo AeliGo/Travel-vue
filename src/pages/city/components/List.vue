@@ -48,7 +48,9 @@ export default {
     ...mapState(['city'])
   },
   mounted () {
-    this.scroll = new BScroll(this.$refs.wrapper)
+    this.scroll = new BScroll(this.$refs.wrapper, {
+      click: true
+    })
   },
   methods: {
     handleCityClick (city) {
@@ -90,6 +92,7 @@ export default {
     .button-wrapper
       float : left
       width: 33.33%
+      cursor : pointer
       .button
         text-align :center
         margin :.1rem
@@ -98,6 +101,7 @@ export default {
         border-radius :.06rem
   .item-list
     .item
+      cursor :pointer
       line-height :.76rem
       color :#666
       padding-left :.2rem
