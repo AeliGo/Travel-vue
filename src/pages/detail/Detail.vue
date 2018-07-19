@@ -25,16 +25,27 @@ export default {
       bannerImg: '',
       categoryList: [],
       gallaryImgs: [],
-      sightName: ''
+      sightName: '',
+      lastCity: ''
     }
   },
   mounted () {
+    this.lastCity = this.$route.params.id
     this.getDetailInfo()
+  },
+  activated () {
+    if (this.lastCity !== this.$route.params.id) {
+      this.lastCity = this.$route.params.id
+      this.getDetailInfo()
+    }
   },
   methods: {
     getDetailInfo () {
-      axios.get('/api/detail.json')
-        .then(this.getDetailInfoSucc)
+      axios.get('/api/detail.json?id=', {
+        params: {
+          id: this.$route.params.id
+        }
+      }).then(this.getDetailInfoSucc)
     },
     getDetailInfoSucc (res) {
       res = res.data
