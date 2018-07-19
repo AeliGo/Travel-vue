@@ -9,13 +9,13 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/travel',
     proxyTable: { //设置代理 重写请求地址
       '/api': {
-        target: 'http://localhost:8080',
-        pathRewrite: {
-          '^/api': '/static/mock' 
-        }
+        target: 'http://localhost:80',
+        // pathRewrite: {
+        //   '^/api': '/static/mock' 
+        // }
       }
     },
 
@@ -57,7 +57,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/travel',
 
     /**
      * Source Maps
