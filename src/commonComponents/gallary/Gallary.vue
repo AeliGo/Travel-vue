@@ -2,7 +2,7 @@
   <div class="container" @click="handleGallaryClick">
     <div class="wrapper">
       <swiper :options="swiperOption" v-if="showSwiper">
-        <swiper-slide v-for="(item,index) of imgs" :key="index">
+        <swiper-slide v-for="(item,index) of imgs" :key="index" class="swiper-zoom-container">
           <img class="swiper-img" :src="item" alt="">
         </swiper-slide>
         <div class="swiper-pagination"  slot="pagination"></div>
@@ -25,7 +25,7 @@ export default {
         autoplay: false,
         paginationType: 'fraction',
         observeParents: true, /* 用于每次dom结构变化时swiper自我刷新 */
-        observer: true
+        observer: true,
       }
     }
   },
